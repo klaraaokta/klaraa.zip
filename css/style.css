@@ -1599,3 +1599,9 @@ footer .soc {
 #modal h3 {
     margin-top: 16px
 }
+
+@media (max-width: 640px) {
+    .pjgrid {
+        grid-template-columns: 1fr
+    }
+}
