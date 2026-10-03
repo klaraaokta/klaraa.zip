@@ -1605,3 +1605,26 @@ footer .soc {
         grid-template-columns: 1fr
     }
 }
+.cvl {
+    display: none
+}
+
+@media (max-width: 900px) {
+    .cvf {
+        display: none
+    }
+
+    .cvl {
+        display: block;
+        margin-top: 20px
+    }
+
+    .cvi {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--bd);
+        border-radius: 14px;
+        background: #fff
+    }
+}
