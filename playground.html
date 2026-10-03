@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang=id>
+
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=theme-color content="#fdf0f6">
+    <meta name=description
+        content="Portofolio Klara Oktaviana, Web Developer yang membangun website modern, responsif, dan nyaman dipakai.">
+    <meta property=og:title content="Klara Oktaviana · Web Developer">
+    <meta property=og:description content="Lihat proyek dan cara menghubungi saya.">
+    <meta property=og:type content=website>
+    <meta property=og:image content="https://klaraoktavianaa.netlify.app/assets/og.png">
+    <meta property=og:url content="https://klaraoktavianaa.netlify.app/">
+    <meta name=twitter:card content=summary_large_image>
+    <link rel=icon
+        href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><rect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%23334155%27/><text x=%2750%27 y=%2768%27 font-size=%2758%27 font-family=%27Arial%27 fill=%27white%27 text-anchor=%27middle%27>K</text></svg>">
+    <link rel=preconnect href=https://fonts.googleapis.com>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel=stylesheet>
+    <link rel=stylesheet href=css/style.css>
+    <!-- Penghitung pengunjung (Umami, gratis): hapus komentar ini dan isi website-id
+<script defer src="https://cloud.umami.is/script.js" data-website-id="ID-ANDA"></script> -->
+    <title>Playground · Klara Oktaviana</title>
+</head>
+
+<body>
+    <main>
+        <section class=phead>
+            <div class=wrap>
+                <h1>Playground</h1>
+                <p class=sub>Kumpulan mini demo buatan saya sendiri. Silakan dicoba langsung.</p>
+            </div>
+        </section>
+        <section style="padding-top:40px">
+            <div class="wrap pgrid">
+
+                <div class="card demo">
+                    <div class=dh>
+                        <h3>Generator warna</h3><span class=tag>JavaScript</span>
+                    </div>
+                    <p class=sub>Klik warna untuk menyalin kode hex.</p>
+                    <div class=sws id=sws></div><button class=btn id=gw>Acak palet</button>
+                </div>
+
+                <div class="card demo">
+                    <div class=dh>
+                        <h3>To-do list</h3><span class=tag>localStorage</span>
+                    </div>
+                    <p class=sub>Tugas tersimpan di browser. Klik untuk mencoret.</p>
+                    <form id=tf class=row><input id=ti placeholder="Tulis tugas..." autocomplete=off><button
+                            class=btn>Tambah</button></form>
+                    <ul id=tl class=tlist></ul><small id=tc class=sub></small>
+                </div>
+
+                <div class="card demo">
+                    <div class=dh>
+                        <h3>Kalkulator</h3><span class=tag>JavaScript</span>
+                    </div>
+                    <div class=out id=cd>0</div>
+                    <div class=keys id=keys></div>
+                </div>
+
+                <div class="card demo">
+                    <div class=dh>
+                        <h3>Timer fokus</h3><span class=tag>Pomodoro</span>
+                    </div>
+                    <p class=sub>Fokus 25 menit tanpa gangguan.</p>
+                    <div class=out id=pt>25:00</div>
+                    <div class=row><button class=btn id=ps>Mulai</button><button class="btn o" id=pr2>Reset</button>
+                    </div>
+                </div>
+
+                <div class="card demo">
+                    <div class=dh>
+                        <h3>Tes kecepatan mengetik</h3><span class=tag>Game</span>
+                    </div>
+                    <div class=out id=tt style="font-size:.95rem;font-weight:500;text-align:left"></div>
+                    <textarea id=ti2 rows=2 placeholder="Mulai mengetik di sini..."></textarea>
+                    <div class=row><small class=sub id=tr style=flex:1>Kecepatan akan tampil setelah
+                            selesai.</small><button class="btn o" id=trs>Ulangi</button></div>
+                </div>
+
+                <div class="card demo">
+                    <div class=dh>
+                        <h3>Game memori</h3><span class=tag>Game</span>
+                    </div>
+                    <div class=mem id=mem></div>
+                    <div class=row><small class=sub id=mi style=flex:1>Langkah: 0</small><button class="btn o"
+                            id=mr>Acak ulang</button></div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src=js/script.js></script>
+    <script>
+        const $ = id => document.getElementById(id);
+        /* warna */
+        const gc = () => '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+        const pal = () => { $('sws').innerHTML = ''; for (let i = 0; i < 5; i++) { const c = gc(), b = document.createElement('button'); b.className = 'sw'; b.style.background = c; b.title = c; b.innerHTML = '<span>' + c + '</span>'; b.onclick = () => navigator.clipboard.writeText(c).then(() => toast('Tersalin: ' + c)); $('sws').append(b) } };
+        $('gw').onclick = pal; pal();
+        /* to-do */
+        let td = []; try { td = JSON.parse(localStorage.getItem('td') || '[]') } catch (e) { }
+        const sv = () => { try { localStorage.setItem('td', JSON.stringify(td)) } catch (e) { } };
+        const rt = () => { $('tl').innerHTML = ''; td.forEach((t, i) => { const l = document.createElement('li'); l.innerHTML = '<span></span><button aria-label=Hapus>×</button>'; l.firstChild.textContent = t.t; if (t.d) l.classList.add('dn'); l.firstChild.onclick = () => { t.d = !t.d; sv(); rt() }; l.lastChild.onclick = () => { td.splice(i, 1); sv(); rt() }; $('tl').append(l) }); $('tc').textContent = td.length ? td.filter(x => !x.d).length + ' tugas tersisa' : 'Belum ada tugas' };
+        $('tf').onsubmit = e => { e.preventDefault(); const v = $('ti').value.trim(); if (!v) return; td.push({ t: v, d: false }); $('ti').value = ''; sv(); rt() }; rt();
+        /* kalkulator */
+        let ex = ''; const cd = $('cd');
+        ['C', '⌫', '%', '÷', '7', '8', '9', '×', '4', '5', '6', '−', '1', '2', '3', '+', '0', '.', '='].forEach(k => {
+            const b = document.createElement('button'); b.textContent = k; if ('÷×−+='.includes(k)) b.className = 'op'; if (k == '0') b.style.gridColumn = 'span 2'; b.onclick = () => {
+                if (k == 'C') ex = ''; else if (k == '⌫') ex = ex.slice(0, -1); else if (k == '=') { try { const s = ex.replace(/÷/g, '/').replace(/×/g, '*').replace(/−/g, '-').replace(/%/g, '/100'); if (/^[0-9+\-*\/.() ]+$/.test(s)) { const r = Function('return ' + s)(); ex = String(+r.toFixed(8)) } } catch (e) { ex = 'Error' } } else ex = (ex == 'Error' ? '' : ex) + k; cd.textContent = ex || '0'
+            }; $('keys').append(b)
+        });
+        /* timer */
+        let sec = 1500, iv = null; const ft = () => $('pt').textContent = String(Math.floor(sec / 60)).padStart(2, '0') + ':' + String(sec % 60).padStart(2, '0');
+        $('ps').onclick = () => { if (iv) { clearInterval(iv); iv = null; $('ps').textContent = 'Lanjut' } else { $('ps').textContent = 'Jeda'; iv = setInterval(() => { sec--; ft(); if (sec <= 0) { clearInterval(iv); iv = null; $('ps').textContent = 'Mulai'; sec = 1500; toast('Waktu fokus selesai 🌸'); ft() } }, 1000) } };
+        $('pr2').onclick = () => { clearInterval(iv); iv = null; sec = 1500; ft(); $('ps').textContent = 'Mulai' };
+        /* mengetik */
+        const TS = 'Website yang baik dibuat dengan kode rapi dan desain yang nyaman dipakai.'; let t0 = 0; $('tt').textContent = TS;
+        $('ti2').oninput = () => { const v = $('ti2').value; if (!t0) t0 = Date.now(); if (v.length >= TS.length) { const m = (Date.now() - t0) / 60000, ok = [...TS].filter((c, i) => c == v[i]).length; $('tr').textContent = Math.round(TS.length / 5 / m) + ' kata/menit · akurasi ' + Math.round(ok / TS.length * 100) + '%'; $('ti2').disabled = true } };
+        $('trs').onclick = () => { t0 = 0; $('ti2').value = ''; $('ti2').disabled = false; $('tr').textContent = 'Kecepatan akan tampil setelah selesai.' };
+        /* memori */
+        let mf = null, mk = false, mm = 0, md = 0; const EM = ['🌸', '🌷', '🍓', '🍒', '🎀', '🦋'];
+        const mb = () => { const d = [...EM, ...EM].sort(() => Math.random() - .5); mf = null; mk = false; mm = 0; md = 0; $('mi').textContent = 'Langkah: 0'; $('mem').innerHTML = ''; d.forEach(e => { const b = document.createElement('button'); b.className = 'mc'; b.onclick = () => { if (mk || b.classList.contains('up') || b.classList.contains('ok')) return; b.textContent = e; b.classList.add('up'); if (!mf) { mf = b; return } mm++; $('mi').textContent = 'Langkah: ' + mm; if (mf.textContent == e) { mf.classList.add('ok'); b.classList.add('ok'); mf = null; if (++md == 6) $('mi').textContent = 'Selesai dalam ' + mm + ' langkah 🎉' } else { mk = true; const a = mf; setTimeout(() => { a.textContent = ''; b.textContent = ''; a.classList.remove('up'); b.classList.remove('up'); mf = null; mk = false }, 700) } }; $('mem').append(b) }) };
+        $('mr').onclick = mb; mb();
+    </script>
+</body>
+
+</html>

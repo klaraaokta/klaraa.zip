@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang=id>
+
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=theme-color content="#fdf0f6">
+    <meta name=description
+        content="Portofolio Klara Oktaviana, Web Developer yang membangun website modern, responsif, dan nyaman dipakai.">
+    <meta property=og:title content="Klara Oktaviana · Web Developer">
+    <meta property=og:description content="Lihat proyek dan cara menghubungi saya.">
+    <meta property=og:type content=website>
+    <meta property=og:image content="https://klaraoktavianaa.netlify.app/assets/og.png">
+    <meta property=og:url content="https://klaraoktavianaa.netlify.app/">
+    <meta name=twitter:card content=summary_large_image>
+    <link rel=icon
+        href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><rect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%23334155%27/><text x=%2750%27 y=%2768%27 font-size=%2758%27 font-family=%27Arial%27 fill=%27white%27 text-anchor=%27middle%27>K</text></svg>">
+    <link rel=preconnect href=https://fonts.googleapis.com>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel=stylesheet>
+    <link rel=stylesheet href=css/style.css>
+    <!-- Penghitung pengunjung (Umami, gratis): hapus komentar ini dan isi website-id
+<script defer src="https://cloud.umami.is/script.js" data-website-id="ID-ANDA"></script> -->
+    <title>Proyek · Klara Oktaviana</title>
+</head>
+
+<body>
+    <main>
+        <section class=phead>
+            <div class=wrap>
+                <h1>Proyek</h1>
+                <p class=sub>Klik kartu untuk melihat detail.</p>
+            </div>
+        </section>
+        <section style="padding-top:16px">
+            <div class=wrap><input id=q placeholder="Cari proyek..."
+                    style="width:100%;max-width:320px;margin-bottom:16px">
+                <div class=filters><button class=on data-f=all>Semua</button><button data-f=web>Web</button><button
+                        data-f=laravel>Laravel</button><button data-f=ui>UI/UX</button></div>
+                <div class=pjgrid id=sk>
+                    <div class=sk></div>
+                </div>
+                <div class="pjgrid hide" id=gr>
+                    <!--
+                    CARA MENAMBAH PROYEK BARU: salin satu blok <div class="card pr"> di bawah, lalu ganti isinya.
+                    - data-id   : nomor proyek (harus sama dengan nomor di kasus.html)
+                    - data-c    : kategori filter, boleh lebih dari satu dipisah spasi (web laravel ui)
+                    - data-imgs : daftar gambar pop-up dipisah koma (gambar pertama jadi gambar kartu)
+                    - data-live / data-gh : link Live Demo / GitHub (kosongkan kalau belum ada)
+                    Ukuran kartu otomatis sama semua.
+                    -->
+                    <div class="card pr" data-id=1 data-c="web laravel" data-t="BisikKata"
+                        data-d="Platform untuk menulis surat kepada seseorang yang tidak akan pernah membacanya, sebagai cara melepaskan perasaan yang belum tersampaikan."
+                        data-imgs="assets/proyek1-bisikkata.png" data-live="https://bisikkataa.netlify.app/" data-gh="">
+                        <div class=frame><img src="assets/proyek1-bisikkata.png" alt="Tampilan beranda BisikKata"></div>
+                        <h3>BisikKata</h3>
+                        <p>Platform untuk menulis surat kepada seseorang yang tidak akan pernah membacanya, sebagai cara
+                            melepaskan perasaan yang belum tersampaikan.</p><span class=tag>Laravel &middot; Blade
+                            &middot; MySQL</span>
+                    </div>
+                </div>
+                <p class="sub hide" id=empty style="margin-top:8px">Belum ada proyek yang cocok.</p>
+            </div>
+        </section>
+        <div class=modal id=modal>
+            <div class=box><button class=x aria-label=Tutup>×</button>
+                <div class=sl>
+                    <div class=slides></div>
+                    <nav class=snav></nav>
+                </div>
+                <h3 id=mt></h3>
+                <p id=md class=sub></p>
+                <div class=acts><a class=btn id=lv href=# target=_blank rel=noopener>Live Demo</a> <a class="btn o" id=gh
+                        href=# target=_blank rel=noopener>GitHub</a> <a class="btn o" id=cs href=kasus.html>Studi
+                        kasus</a></div>
+            </div>
+        </div>
+        <div id=lb><button class=x aria-label=Tutup>×</button><img alt=""></div>
+    </main>
+    <script src=js/script.js></script>
+    <script>addEventListener('load', () => { sk.classList.add('hide'); gr.classList.remove('hide') })</script>
+</body>
+
+</html>

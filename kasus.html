@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang=id>
+
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=theme-color content="#fdf0f6">
+    <meta name=description
+        content="Portofolio Klara Oktaviana, Web Developer yang membangun website modern, responsif, dan nyaman dipakai.">
+    <meta property=og:title content="Klara Oktaviana · Web Developer">
+    <meta property=og:description content="Lihat proyek dan cara menghubungi saya.">
+    <meta property=og:type content=website>
+    <meta property=og:image content="https://klaraoktavianaa.netlify.app/assets/og.png">
+    <meta property=og:url content="https://klaraoktavianaa.netlify.app/">
+    <meta name=twitter:card content=summary_large_image>
+    <link rel=icon
+        href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><rect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%23334155%27/><text x=%2750%27 y=%2768%27 font-size=%2758%27 font-family=%27Arial%27 fill=%27white%27 text-anchor=%27middle%27>K</text></svg>">
+    <link rel=preconnect href=https://fonts.googleapis.com>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel=stylesheet>
+    <link rel=stylesheet href=css/style.css>
+    <!-- Penghitung pengunjung (Umami, gratis): hapus komentar ini dan isi website-id
+<script defer src="https://cloud.umami.is/script.js" data-website-id="ID-ANDA"></script> -->
+    <title>Studi kasus · Klara Oktaviana</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class=wrap><a class=lk href=proyek.html>← Semua proyek</a>
+                <h1 id=jt style="margin-top:12px"></h1>
+                <div class=frame id=kimg style="margin:20px 0">
+                    <div class=fb><i></i><i></i><i></i></div>
+                    <div class=ph style=height:240px>Screenshot utama</div>
+                </div>
+                <div class=grid id=kg>
+                    <div class=card>
+                        <h3>Masalah</h3>
+                        <p>Jelaskan masalah yang ingin diselesaikan.</p>
+                    </div>
+                    <div class=card>
+                        <h3>Solusi</h3>
+                        <p>Jelaskan solusi dan keputusan desain/teknis.</p>
+                    </div>
+                    <div class=card>
+                        <h3>Proses</h3>
+                        <p>Ceritakan tahapan pengerjaan dan tantangannya.</p>
+                    </div>
+                    <div class=card>
+                        <h3>Hasil</h3>
+                        <p>Jelaskan hasil dan apa yang dipelajari.</p>
+                    </div>
+                </div>
+                <p style=margin-top:20px id=klinks><a class=btn href=#>Live Demo</a> <a class="btn o" href=#>GitHub</a>
+                </p>
+                <div id=pn class=row style="margin-top:36px;justify-content:space-between"></div>
+            </div>
+        </section>
+        <div id=lb><button class=x aria-label=Tutup>×</button><img alt=""></div>
+    </main>
+    <script src=js/script.js></script>
+    <script>
+        const DATA = {
+            1: {
+                t: 'BisikKata', img: 'assets/proyek1-bisikkata.png', live: 'https://bisikkataa.netlify.app/', gh: '#',
+                masalah: 'Banyak perasaan dan kata-kata yang ingin disampaikan ke seseorang, tapi tidak akan pernah benar-benar terucap atau terkirim.',
+                solusi: 'Membuat platform tempat menulis surat untuk siapa saja (termasuk diri sendiri), dikelompokkan berdasarkan jenis perasaan seperti Kangen, Maaf, Sayang, Sedih, Lega, dan Bangga, sebagai cara melepaskan tanpa harus benar-benar mengirimkannya.',
+                proses: 'Dibangun dengan Laravel dan Blade untuk alur menulis dan menjelajahi “bisikan” orang lain, dengan tampilan pastel yang terasa hangat dan personal.',
+                hasil: 'Website berjalan dengan fitur tulis surat, jelajahi bisikan dari pengguna lain, riwayat tulisan, dan ringkasan perasaan yang paling banyak dibisikkan.'
+            },
+        };
+        const p = +(new URLSearchParams(location.search).get('p') || 1), N = Object.keys(DATA).length, d = DATA[p];
+        jt.textContent = d ? d.t : 'Proyek ' + p;
+        if (d) {
+            kimg.querySelector('.ph').outerHTML = `<img src="${d.img}" alt="Tampilan ${d.t}" style="display:block;width:100%;height:auto;cursor:zoom-in">`;
+            const im = kimg.querySelector('img'), lb = document.getElementById('lb');
+            im.onclick = () => { lb.querySelector('img').src = d.img; lb.classList.add('open') };
+            lb.onclick = () => lb.classList.remove('open');
+            addEventListener('keydown', e => { if (e.key == 'Escape') lb.classList.remove('open') });
+            const c = kg.querySelectorAll('p');
+            c[0].textContent = d.masalah; c[1].textContent = d.solusi; c[2].textContent = d.proses; c[3].textContent = d.hasil;
+            klinks.innerHTML = `<a class="btn" href="${d.live}" target="_blank">Live Demo</a>` + (d.gh != '#' ? ` <a class="btn o" href="${d.gh}" target="_blank">GitHub</a>` : '');
+        }
+        if (N > 1) pn.innerHTML = `<a class="btn o" href="kasus.html?p=${p > 1 ? p - 1 : N}">← Sebelumnya</a><a class="btn" href="kasus.html?p=${p < N ? p + 1 : 1}">Berikutnya →</a>`
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang=id>
+
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=theme-color content="#fdf0f6">
+    <meta name=description
+        content="Portofolio Klara Oktaviana, Web Developer yang membangun website modern, responsif, dan nyaman dipakai.">
+    <meta property=og:title content="Klara Oktaviana · Web Developer">
+    <meta property=og:description content="Lihat proyek dan cara menghubungi saya.">
+    <meta property=og:type content=website>
+    <meta property=og:image content="https://klaraoktavianaa.netlify.app/assets/og.png">
+    <meta property=og:url content="https://klaraoktavianaa.netlify.app/">
+    <meta name=twitter:card content=summary_large_image>
+    <link rel=icon
+        href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><rect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%23334155%27/><text x=%2750%27 y=%2768%27 font-size=%2758%27 font-family=%27Arial%27 fill=%27white%27 text-anchor=%27middle%27>K</text></svg>">
+    <link rel=preconnect href=https://fonts.googleapis.com>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel=stylesheet>
+    <link rel=stylesheet href=css/style.css>
+    <!-- Penghitung pengunjung (Umami, gratis): hapus komentar ini dan isi website-id
+<script defer src="https://cloud.umami.is/script.js" data-website-id="ID-ANDA"></script> -->
+    <title>Blog · Klara Oktaviana</title>
+</head>
+
+<body>
+    <main>
+        <section class=phead>
+            <div class=wrap>
+                <h1>Blog</h1>
+                <p class=sub>Catatan kecil dari perjalanan belajar, membuat, mencoba, dan berkembang.</p>
+            </div>
+        </section>
+        <section style="padding-top:16px">
+            <div class=wrap>
+                <input id=q placeholder="Cari tulisan..." style="width:100%;max-width:320px;margin-bottom:16px">
+                <div class=filters><button class="on" data-f="all">Semua</button><button class=""
+                        data-f="web">Web</button><button class="" data-f="belajar">Belajar</button><button class=""
+                        data-f="catatan">Catatan</button><button class="" data-f="personal">Personal</button></div>
+                <div class=grid>
+                    <div class="card po" data-c="web" data-target="post1" tabindex="0"><span class="tag">Web</span>
+                        <h3>1. Dari Ide Jadi Website Pertamaku</h3>
+                        <p>Cerita tentang bagaimana sebuah ide sederhana berubah menjadi website yang bisa aku lihat,
+                            gunakan, dan banggakan sendiri.</p><small class="sub">3 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="web" data-target="post2" tabindex="0"><span class="tag">Web</span>
+                        <h3>2. Membuat Website Portfolio dari Nol</h3>
+                        <p>Proses membuat website portfolio sendiri, mulai dari menentukan isi sampai mengatur tampilan
+                            agar tetap sederhana dan nyaman dilihat.</p><small class="sub">4 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="web" data-target="post3" tabindex="0"><span class="tag">Web</span>
+                        <h3>3. Cara Aku Membuat Website Terlihat Clean</h3>
+                        <p>Beberapa hal sederhana yang aku gunakan supaya tampilan website terasa lebih rapi, modern,
+                            dan nyaman dilihat.</p><small class="sub">3 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="web" data-target="post4" tabindex="0"><span class="tag">Web</span>
+                        <h3>4. Kesalahan Coding yang Pernah Aku Buat</h3>
+                        <p>Beberapa kesalahan kecil saat coding yang ternyata justru menjadi bagian penting dari proses
+                            belajarku.</p><small class="sub">4 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="web" data-target="post5" tabindex="0"><span class="tag">Web</span>
+                        <h3>5. HTML, CSS, dan JavaScript Itu Buat Apa?</h3>
+                        <p>Penjelasan sederhana tentang tiga teknologi dasar yang sering digunakan ketika membuat
+                            website.</p><small class="sub">5 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="belajar" data-target="post6" tabindex="0"><span
+                            class="tag">Belajar</span>
+                        <h3>6. Perjalananku Belajar Coding dari Nol</h3>
+                        <p>Catatan tentang bagaimana aku mulai mengenal coding dan perlahan belajar membuat sesuatu
+                            sendiri.</p><small class="sub">5 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="belajar" data-target="post7" tabindex="0"><span
+                            class="tag">Belajar</span>
+                        <h3>7. 5 Hal yang Aku Pelajari dari Coding</h3>
+                        <p>Coding ternyata bukan cuma tentang bahasa pemrograman. Ada banyak hal lain yang ikut aku
+                            pelajari selama prosesnya.</p><small class="sub">4 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="belajar" data-target="post8" tabindex="0"><span
+                            class="tag">Belajar</span>
+                        <h3>8. Apa yang Aku Lakukan Saat Coding Error?</h3>
+                        <p>Cara sederhana yang biasanya aku lakukan ketika menemukan error dan tidak tahu harus mulai
+                            dari mana.</p><small class="sub">3 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="belajar" data-target="post9" tabindex="0"><span
+                            class="tag">Belajar</span>
+                        <h3>9. Cara Belajar Coding Tanpa Mudah Menyerah</h3>
+                        <p>Beberapa cara yang membantuku tetap menikmati proses belajar coding meskipun kadang terasa
+                            sulit.</p><small class="sub">4 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="belajar" data-target="post10" tabindex="0"><span
+                            class="tag">Belajar</span>
+                        <h3>10. Belajar Coding dari Nol: Mulai dari Mana?</h3>
+                        <p>Panduan sederhana untuk seseorang yang baru ingin mengenal dunia coding dan belum tahu harus
+                            memulai dari mana.</p><small class="sub">5 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="catatan" data-target="post11" tabindex="0"><span
+                            class="tag">Catatan</span>
+                        <h3>11. Project yang Sedang Aku Kerjakan</h3>
+                        <p>Tempat untuk mencatat project yang sedang aku buat, mulai dari ide sampai perkembangan
+                            terbarunya.</p><small class="sub">3 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="catatan" data-target="post12" tabindex="0"><span
+                            class="tag">Catatan</span>
+                        <h3>12. Apa yang Aku Pelajari Minggu Ini?</h3>
+                        <p>Catatan singkat tentang hal-hal baru yang aku temukan selama belajar dalam satu minggu.</p>
+                        <small class="sub">2 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="catatan" data-target="post13" tabindex="0"><span
+                            class="tag">Catatan</span>
+                        <h3>13. Target Belajarku Bulan Ini</h3>
+                        <p>Beberapa hal yang ingin aku pelajari dan project yang ingin aku selesaikan bulan ini.</p>
+                        <small class="sub">2 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="catatan" data-target="post14" tabindex="0"><span
+                            class="tag">Catatan</span>
+                        <h3>14. Project yang Paling Aku Banggakan</h3>
+                        <p>Cerita tentang project yang memiliki arti tersendiri karena menjadi salah satu bukti
+                            perkembangan belajarku.</p><small class="sub">4 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="personal" data-target="post15" tabindex="0"><span
+                            class="tag">Personal</span>
+                        <h3>15. Kenapa Aku Suka Membuat Website?</h3>
+                        <p>Cerita tentang rasa penasaran yang perlahan berubah menjadi ketertarikan untuk membuat dan
+                            mengembangkan website.</p><small class="sub">3 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="personal" data-target="post16" tabindex="0"><span
+                            class="tag">Personal</span>
+                        <h3>16. Hal-Hal Kecil yang Membuatku Semangat Belajar</h3>
+                        <p>Beberapa hal sederhana yang membuat proses belajar terasa lebih menyenangkan dan membuatku
+                            ingin terus mencoba.</p><small class="sub">3 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="personal" data-target="post17" tabindex="0"><span
+                            class="tag">Personal</span>
+                        <h3>17. Website Ini Dibuat untuk Apa?</h3>
+                        <p>Cerita di balik website portfolio ini dan alasan kenapa aku membuat ruang digital yang berisi
+                            project, tulisan, dan perjalanan.</p><small class="sub">3 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="personal" data-target="post18" tabindex="0"><span
+                            class="tag">Personal</span>
+                        <h3>18. Hal yang Ingin Aku Capai</h3>
+                        <p>Beberapa hal yang ingin aku pelajari, buat, dan capai dalam perjalanan ke depan.</p><small
+                            class="sub">3 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="personal" data-target="post19" tabindex="0"><span
+                            class="tag">Personal</span>
+                        <h3>19. Dari “Aku Nggak Bisa” Menjadi “Aku Coba Dulu”</h3>
+                        <p>Tentang perubahan kecil dalam cara berpikir yang aku rasakan selama belajar sesuatu yang
+                            baru.</p><small class="sub">3 menit baca</small>
+                    </div>
+                    <div class="card po" data-c="personal" data-target="post20" tabindex="0"><span
+                            class="tag">Personal</span>
+                        <h3>20. Catatan untuk Diriku di Masa Depan</h3>
+                        <p>Sebuah pesan kecil untuk diriku sendiri di masa depan tentang bagaimana semuanya dimulai.</p>
+                        <small class="sub">3 menit baca</small>
+                    </div>
+                </div>
+                <div class="post-full" id="post1" hidden data-title="1. Dari Ide Jadi Website Pertamaku"
+                    data-meta="Web &middot; 3 menit baca">
+                    <p>Membuat website untuk pertama kalinya terasa seperti mencoba sesuatu yang sebelumnya kelihatan
+                        sulit.</p>
+                    <p>Awalnya aku hanya penasaran bagaimana sebuah website bisa dibuat. Dari rasa penasaran itu, aku
+                        mulai mengenal HTML, CSS, dan sedikit demi sedikit JavaScript.</p>
+                    <p>Tentu saja prosesnya tidak selalu berjalan lancar. Ada bagian yang tidak sesuai dengan desain,
+                        ada kode yang error, dan ada saatnya aku harus mencoba berkali-kali sampai akhirnya berhasil.
+                    </p>
+                    <p>Tapi justru dari proses itu aku belajar bahwa membuat website bukan hanya tentang menulis kode.
+                        Aku juga belajar bagaimana mengubah sebuah ide menjadi sesuatu yang benar-benar bisa dilihat dan
+                        digunakan.</p>
+                    <p>Website pertama mungkin belum sempurna, tetapi dari sanalah aku mulai belajar untuk membuat
+                        sesuatu yang lebih baik.</p>
+                    <p>Setiap bagian yang selesai memberikan rasa puas tersendiri. Dan setiap error memberikan pelajaran
+                        baru.</p>
+                    <p>Mungkin perjalanan ini masih panjang, tetapi aku senang sudah berani memulainya.</p>
+                </div>
+                <div class="post-full" id="post2" hidden data-title="2. Membuat Website Portfolio dari Nol"
+                    data-meta="Web &middot; 4 menit baca">
+                    <p>Portfolio menurutku bukan hanya tempat untuk menunjukkan hasil karya. Portfolio juga menjadi
+                        tempat untuk menyimpan perjalanan.</p>
+                    <p>Karena itu, aku ingin membuat website yang tidak hanya berisi project, tetapi juga sedikit cerita
+                        tentang siapa aku, apa yang sedang aku pelajari, dan hal-hal yang pernah aku kerjakan.</p>
+                    <p>Aku memilih desain yang sederhana supaya informasi tetap mudah ditemukan.</p>
+                    <p>Mulai dari navbar, halaman project, playground, sampai blog ini sendiri, semuanya dibuat supaya
+                        website terasa seperti satu kesatuan.</p>
+                    <p>Bagian yang paling menarik adalah ketika desain yang awalnya hanya ada di pikiran mulai berubah
+                        menjadi tampilan website yang nyata.</p>
+                    <p>Dari project ini aku belajar bahwa website yang bagus tidak harus selalu ramai. Kadang desain
+                        yang sederhana justru membuat sebuah website terasa lebih nyaman.</p>
+                    <p>Portfolio ini juga menjadi pengingat bahwa setiap project yang pernah dibuat adalah bagian dari
+                        perkembangan.</p>
+                </div>
+                <div class="post-full" id="post3" hidden data-title="3. Cara Aku Membuat Website Terlihat Clean"
+                    data-meta="Web &middot; 3 menit baca">
+                    <p>Salah satu hal yang paling aku perhatikan ketika membuat website adalah tampilan yang rapi.</p>
+                    <p>Aku biasanya mulai dari memilih beberapa warna utama, kemudian menentukan font dan ukuran teks
+                        yang konsisten.</p>
+                    <p>Setelah itu aku memperhatikan jarak antar elemen. Jarak yang terlalu dekat bisa membuat halaman
+                        terasa penuh, sedangkan jarak yang terlalu jauh bisa membuat informasi terasa terpisah.</p>
+                    <p>Aku juga mencoba untuk tidak menggunakan terlalu banyak warna atau dekorasi.</p>
+                    <p>Menurutku, tidak semua ruang harus diisi.</p>
+                    <p>White space justru bisa membuat sebuah halaman terasa lebih lega dan memberikan perhatian lebih
+                        kepada bagian yang penting.</p>
+                    <p>Selain tampilan, aku juga mencoba memikirkan pengalaman orang yang membuka website.</p>
+                    <p>Karena website bukan hanya tentang bagaimana tampilannya, tetapi juga tentang bagaimana orang
+                        menggunakannya.</p>
+                </div>
+                <div class="post-full" id="post4" hidden data-title="4. Kesalahan Coding yang Pernah Aku Buat"
+                    data-meta="Web &middot; 4 menit baca">
+                    <p>Saat belajar coding, error adalah sesuatu yang hampir tidak bisa dihindari.</p>
+                    <p>Pernah ada saatnya aku mencari kesalahan hanya karena satu tanda yang kurang, nama class yang
+                        berbeda, atau kode yang diletakkan di tempat yang salah.</p>
+                    <p>Awalnya error terasa menyebalkan.</p>
+                    <p>Tetapi lama-kelamaan aku mulai melihat error sebagai petunjuk.</p>
+                    <p>Aku belajar membaca pesan error, mencari bagian kode yang bermasalah, kemudian mencoba
+                        memperbaikinya satu per satu.</p>
+                    <p>Dari situ aku sadar bahwa menjadi programmer bukan berarti tidak pernah membuat kesalahan.</p>
+                    <p>Justru yang penting adalah bisa menemukan, memahami, dan memperbaiki kesalahan tersebut.</p>
+                    <p>Setiap error yang pernah membuatku bingung akhirnya menjadi pengalaman yang berguna untuk project
+                        berikutnya.</p>
+                </div>
+                <div class="post-full" id="post5" hidden data-title="5. HTML, CSS, dan JavaScript Itu Buat Apa?"
+                    data-meta="Web &middot; 5 menit baca">
+                    <p>Kalau website diibaratkan sebuah rumah, HTML bisa dianggap sebagai struktur rumahnya.</p>
+                    <p>HTML menentukan bagian-bagian yang ada di halaman seperti judul, paragraf, gambar, tombol, dan
+                        berbagai elemen lainnya.</p>
+                    <p>CSS kemudian digunakan untuk membuat semuanya terlihat lebih menarik.</p>
+                    <p>Dengan CSS kita bisa mengatur warna, ukuran, font, jarak, layout, animasi, dan banyak hal
+                        lainnya.</p>
+                    <p>Sedangkan JavaScript membuat website menjadi lebih interaktif.</p>
+                    <p>Misalnya ketika sebuah tombol bisa diklik, menu bisa dibuka, data bisa berubah, atau sebuah
+                        animasi berjalan berdasarkan tindakan pengguna.</p>
+                    <p>Ketiganya memiliki fungsi berbeda, tetapi dapat bekerja bersama untuk membuat sebuah website yang
+                        lengkap.</p>
+                    <p>Semakin sering menggunakannya, semakin mudah memahami bagaimana bagian-bagian sebuah website
+                        saling berhubungan.</p>
+                </div>
+                <div class="post-full" id="post6" hidden data-title="6. Perjalananku Belajar Coding dari Nol"
+                    data-meta="Belajar &middot; 5 menit baca">
+                    <p>Belajar coding buatku adalah sebuah perjalanan yang pelan-pelan.</p>
+                    <p>Aku tidak langsung mengerti semuanya. Ada banyak istilah baru, banyak kode yang awalnya terlihat
+                        membingungkan, dan tentunya banyak error.</p>
+                    <p>Tetapi semakin sering mencoba, semakin banyak hal yang mulai terasa familiar.</p>
+                    <p>Aku mulai memahami bahwa tidak apa-apa kalau belum bisa.</p>
+                    <p>Yang penting adalah tetap mencoba, mencari tahu, dan tidak takut melakukan kesalahan.</p>
+                    <p>Setiap project kecil menjadi kesempatan untuk belajar sesuatu yang baru.</p>
+                    <p>Dari sebuah halaman sederhana, aku bisa belajar tentang struktur HTML.</p>
+                    <p>Dari memperbaiki tampilan, aku belajar CSS.</p>
+                    <p>Dari membuat fitur interaktif, aku mulai memahami JavaScript.</p>
+                    <p>Mungkin sekarang aku belum menguasai semuanya, tetapi aku tahu bahwa aku sedang berkembang
+                        sedikit demi sedikit.</p>
+                </div>
+                <div class="post-full" id="post7" hidden data-title="7. 5 Hal yang Aku Pelajari dari Coding"
+                    data-meta="Belajar &middot; 4 menit baca">
+                    <p>Belajar coding ternyata memberikan banyak pelajaran yang tidak hanya berhubungan dengan komputer.
+                    </p>
+                    <p>1. Sabar — Kadang satu masalah kecil membutuhkan waktu lama untuk ditemukan. Dari sana aku
+                        belajar untuk tidak langsung menyerah.</p>
+                    <p>2. Teliti — Satu karakter saja bisa membuat kode tidak berjalan seperti yang diharapkan.</p>
+                    <p>3. Problem solving — Coding membuatku terbiasa mencari tahu penyebab sebuah masalah dan
+                        memikirkan beberapa kemungkinan solusi.</p>
+                    <p>4. Berani mencoba — Tidak semua hal bisa dipahami hanya dengan membaca. Kadang kita harus
+                        langsung mencoba untuk benar-benar mengerti.</p>
+                    <p>5. Konsisten — Kemampuan tidak muncul dalam satu malam. Semakin sering belajar dan membuat
+                        project, semakin banyak hal yang bisa dipahami.</p>
+                    <p>Lima hal sederhana ini justru menjadi bagian penting dari perjalanan belajarku.</p>
+                </div>
+                <div class="post-full" id="post8" hidden data-title="8. Apa yang Aku Lakukan Saat Coding Error?"
+                    data-meta="Belajar &middot; 3 menit baca">
+                    <p>Ketika menemukan error, hal pertama yang aku lakukan adalah membaca pesan error-nya.</p>
+                    <p>Kadang pesan tersebut memang terlihat membingungkan, tetapi biasanya ada petunjuk mengenai bagian
+                        yang bermasalah.</p>
+                    <p>Setelah itu aku mencari tahu kode mana yang kemungkinan menjadi penyebabnya.</p>
+                    <p>Aku juga mencoba melihat perubahan terakhir yang aku buat.</p>
+                    <p>Kalau masih belum menemukan jawabannya, aku mencari dokumentasi, membaca contoh kode, atau
+                        menggunakan bantuan AI untuk memahami masalahnya.</p>
+                    <p>Tetapi aku berusaha untuk tidak hanya menyalin solusi.</p>
+                    <p>Aku ingin memahami kenapa error tersebut terjadi.</p>
+                    <p>Dengan begitu, ketika masalah yang sama muncul lagi, aku punya kemungkinan lebih besar untuk
+                        menyelesaikannya sendiri.</p>
+                    <p>Bagiku, error bukan tanda bahwa aku gagal belajar.</p>
+                    <p>Error justru salah satu bagian dari proses belajar coding.</p>
+                </div>
+                <div class="post-full" id="post9" hidden data-title="9. Cara Belajar Coding Tanpa Mudah Menyerah"
+                    data-meta="Belajar &middot; 4 menit baca">
+                    <p>Aku belajar bahwa belajar coding tidak harus selalu dilakukan berjam-jam.</p>
+                    <p>Kadang belajar sedikit tetapi konsisten jauh lebih menyenangkan.</p>
+                    <p>Aku juga mencoba membuat project kecil daripada hanya membaca teori.</p>
+                    <p>Dengan project, aku bisa langsung melihat hasil dari apa yang sedang dipelajari.</p>
+                    <p>Kalau menemukan sesuatu yang belum dipahami, aku mencatatnya dan mencoba mempelajarinya perlahan.
+                    </p>
+                    <p>Aku juga berusaha tidak membandingkan proses belajarku dengan orang lain.</p>
+                    <p>Setiap orang memiliki kecepatan belajar yang berbeda.</p>
+                    <p>Tidak harus langsung bisa semuanya.</p>
+                    <p>Yang penting hari ini tahu sedikit lebih banyak daripada kemarin.</p>
+                    <p>Selama masih mau mencoba, selalu ada sesuatu yang bisa dipelajari.</p>
+                </div>
+                <div class="post-full" id="post10" hidden data-title="10. Belajar Coding dari Nol: Mulai dari Mana?"
+                    data-meta="Belajar &middot; 5 menit baca">
+                    <p>Kalau baru mulai belajar membuat website, HTML bisa menjadi salah satu titik awal yang sederhana.
+                    </p>
+                    <p>HTML membantu memahami struktur sebuah halaman.</p>
+                    <p>Setelah memahami HTML, CSS bisa dipelajari untuk membuat tampilan menjadi lebih menarik dan
+                        teratur.</p>
+                    <p>Kemudian JavaScript bisa dipelajari untuk membuat website menjadi lebih interaktif.</p>
+                    <p>Menurutku, jangan terlalu fokus menghafal semua kode.</p>
+                    <p>Lebih baik memahami konsepnya dan sering mencoba.</p>
+                    <p>Setelah memiliki dasar, mulai buat project kecil.</p>
+                    <p>Misalnya halaman portfolio, landing page, to-do list, kalkulator, atau website sederhana lainnya.
+                    </p>
+                    <p>Dari project kecil itulah kemampuan mulai berkembang.</p>
+                    <p>Tidak perlu menunggu sampai merasa benar-benar siap.</p>
+                    <p>Mulai dari sesuatu yang sederhana, kemudian tingkatkan sedikit demi sedikit.</p>
+                </div>
+                <div class="post-full" id="post11" hidden data-title="11. Project yang Sedang Aku Kerjakan"
+                    data-meta="Catatan &middot; 3 menit baca">
+                    <p>Saat ini aku sedang mencoba membuat beberapa project untuk mengembangkan kemampuan coding dan
+                        desain.</p>
+                    <p>Setiap project memiliki tantangan masing-masing.</p>
+                    <p>Ada yang fokus pada tampilan, ada yang membutuhkan JavaScript, dan ada juga yang membuatku
+                        belajar teknologi baru.</p>
+                    <p>Aku ingin menggunakan halaman ini sebagai tempat untuk mencatat prosesnya.</p>
+                    <p>Jadi bukan hanya hasil akhirnya yang tersimpan, tetapi juga perjalanan di baliknya.</p>
+                    <p>Menurutku, proses terkadang sama pentingnya dengan hasil.</p>
+                    <p>Karena dari proses itulah aku tahu bagian mana yang sudah berkembang dan bagian mana yang masih
+                        perlu dipelajari.</p>
+                </div>
+                <div class="post-full" id="post12" hidden data-title="12. Apa yang Aku Pelajari Minggu Ini?"
+                    data-meta="Catatan &middot; 2 menit baca">
+                    <p>Minggu ini aku belajar beberapa hal baru tentang membuat website.</p>
+                    <p>Aku mencoba memperbaiki struktur halaman, membuat tampilan lebih responsive, dan belajar mengatur
+                        komponen supaya lebih rapi.</p>
+                    <p>Ada beberapa bagian yang awalnya membuat bingung.</p>
+                    <p>Tetapi setelah dicoba beberapa kali, akhirnya aku mulai memahami konsepnya.</p>
+                    <p>Hal kecil seperti menemukan kesalahan sendiri ternyata memberikan kepuasan tersendiri.</p>
+                    <p>Aku ingin menjadikan catatan mingguan seperti ini sebagai cara untuk melihat perkembangan dari
+                        waktu ke waktu.</p>
+                    <p>Tidak semua minggu harus menghasilkan sesuatu yang besar.</p>
+                    <p>Selama ada satu hal baru yang dipelajari, menurutku itu sudah menjadi progress.</p>
+                </div>
+                <div class="post-full" id="post13" hidden data-title="13. Target Belajarku Bulan Ini"
+                    data-meta="Catatan &middot; 2 menit baca">
+                    <p>Bulan ini aku ingin lebih konsisten belajar coding.</p>
+                    <p>Beberapa target yang ingin aku coba:</p>
+                    <p>— Memahami JavaScript lebih dalam.</p>
+                    <p>— Membuat minimal satu project baru.</p>
+                    <p>— Memperbaiki portfolio.</p>
+                    <p>— Belajar membuat website yang responsive.</p>
+                    <p>— Mencoba teknologi baru.</p>
+                    <p>— Menulis lebih banyak catatan di blog.</p>
+                    <p>Aku tidak ingin menjadikan target sebagai tekanan.</p>
+                    <p>Target ini lebih seperti pengingat tentang hal-hal yang ingin aku coba.</p>
+                    <p>Kalau semuanya belum selesai, tidak apa-apa.</p>
+                    <p>Yang penting tetap ada progress dan aku terus menikmati prosesnya.</p>
+                </div>
+                <div class="post-full" id="post14" hidden data-title="14. Project yang Paling Aku Banggakan"
+                    data-meta="Catatan &middot; 4 menit baca">
+                    <p>Setiap orang mungkin punya satu project yang terasa spesial.</p>
+                    <p>Bukan selalu karena project tersebut paling besar atau paling kompleks.</p>
+                    <p>Terkadang sebuah project terasa spesial karena ada cerita dan proses yang panjang di baliknya.
+                    </p>
+                    <p>Project ini menjadi salah satu pengingat bahwa aku ternyata bisa membuat sesuatu dari nol.</p>
+                    <p>Masih banyak bagian yang bisa diperbaiki.</p>
+                    <p>Tetapi justru itu yang membuat project ini menarik.</p>
+                    <p>Setiap kekurangan memberikan alasan untuk belajar lagi.</p>
+                    <p>Ketika melihat kembali project yang pernah dibuat, aku bisa melihat perubahan dari diriku
+                        sendiri.</p>
+                    <p>Mungkin hasilnya belum sempurna, tetapi aku bangga karena pernah mencoba.</p>
+                </div>
+                <div class="post-full" id="post15" hidden data-title="15. Kenapa Aku Suka Membuat Website?"
+                    data-meta="Personal &middot; 3 menit baca">
+                    <p>Awalnya semuanya hanya rasa penasaran.</p>
+                    <p>Aku ingin tahu bagaimana sebuah website bisa dibuat.</p>
+                    <p>Bagaimana sebuah tulisan bisa muncul di layar, bagaimana tombol bisa melakukan sesuatu ketika
+                        diklik, dan bagaimana sebuah desain bisa diubah menjadi halaman yang benar-benar bisa digunakan.
+                    </p>
+                    <p>Dari pertanyaan-pertanyaan sederhana itu aku mulai mencoba.</p>
+                    <p>Semakin sering mencoba, semakin aku menikmati prosesnya.</p>
+                    <p>Ada rasa puas ketika sesuatu yang awalnya hanya ada di pikiran akhirnya bisa diwujudkan menjadi
+                        sebuah website.</p>
+                    <p>Aku juga suka ketika bisa melihat perubahan dari waktu ke waktu.</p>
+                    <p>Website yang awalnya sederhana perlahan bisa memiliki lebih banyak fitur, desain yang lebih rapi,
+                        dan struktur yang lebih baik.</p>
+                    <p>Mungkin itulah alasan aku suka membuat website.</p>
+                    <p>Bukan hanya karena codingnya, tetapi karena ada proses mengubah ide menjadi sesuatu yang nyata.
+                    </p>
+                    <p>Setiap project juga memberiku kesempatan untuk belajar sesuatu yang baru.</p>
+                    <p>Dan menurutku, bagian paling menyenangkan adalah ketika melihat hasil akhirnya dan bisa berkata,
+                        “Ternyata aku bisa membuat ini.”</p>
+                </div>
+                <div class="post-full" id="post16" hidden data-title="16. Hal-Hal Kecil yang Membuatku Semangat Belajar"
+                    data-meta="Personal &middot; 3 menit baca">
+                    <p>Belajar tidak selalu harus terasa serius.</p>
+                    <p>Ada banyak hal kecil yang bisa membuatku kembali semangat untuk belajar.</p>
+                    <p>Salah satunya adalah ketika menemukan desain website yang menarik. Dari sana biasanya muncul rasa
+                        penasaran untuk mencoba membuat sesuatu dengan konsep yang serupa.</p>
+                    <p>Menyelesaikan satu bagian kecil dari project juga bisa memberikan motivasi.</p>
+                    <p>Misalnya ketika sebuah tombol akhirnya bekerja, layout yang sebelumnya berantakan mulai terlihat
+                        rapi, atau error yang sudah lama dicari akhirnya berhasil diperbaiki.</p>
+                    <p>Hal-hal kecil seperti itu mungkin terlihat sederhana, tetapi cukup untuk membuatku merasa bahwa
+                        aku sedang berkembang.</p>
+                    <p>Aku juga belajar bahwa istirahat adalah bagian dari proses.</p>
+                    <p>Kalau terlalu lama memaksakan diri ketika sedang bingung, terkadang justru semakin sulit
+                        menemukan solusi.</p>
+                    <p>Jadi sekarang aku mencoba menikmati prosesnya.</p>
+                    <p>Tidak harus selalu cepat.</p>
+                    <p>Tidak harus selalu sempurna.</p>
+                    <p>Yang penting aku tetap punya alasan untuk mencoba lagi.</p>
+                </div>
+                <div class="post-full" id="post17" hidden data-title="17. Website Ini Dibuat untuk Apa?"
+                    data-meta="Personal &middot; 3 menit baca">
+                    <p>Website ini bukan hanya sebuah portfolio.</p>
+                    <p>Aku ingin menjadikannya sebagai tempat untuk menyimpan perjalanan.</p>
+                    <p>Di sini ada project yang pernah aku buat, hal-hal yang sedang aku pelajari, tulisan yang ingin
+                        aku bagikan, dan berbagai eksperimen kecil yang pernah aku coba.</p>
+                    <p>Aku ingin website ini bisa menjadi gambaran tentang prosesku.</p>
+                    <p>Bukan hanya menunjukkan hasil akhir, tetapi juga menunjukkan bahwa di balik setiap project ada
+                        proses belajar, mencoba, memperbaiki, dan terkadang mengulang dari awal.</p>
+                    <p>Mungkin beberapa tahun dari sekarang aku akan melihat kembali website ini dan menemukan banyak
+                        hal yang sudah berubah.</p>
+                    <p>Desain mungkin berbeda.</p>
+                    <p>Kemampuan mungkin sudah berkembang.</p>
+                    <p>Project mungkin sudah jauh lebih kompleks.</p>
+                    <p>Tetapi aku ingin tetap bisa melihat dari mana semuanya dimulai.</p>
+                    <p>Karena setiap perjalanan pasti memiliki titik awal.</p>
+                    <p>Dan website ini adalah salah satu bagian dari titik awal tersebut.</p>
+                </div>
+                <div class="post-full" id="post18" hidden data-title="18. Hal yang Ingin Aku Capai"
+                    data-meta="Personal &middot; 3 menit baca">
+                    <p>Aku tidak ingin terburu-buru menjadi ahli.</p>
+                    <p>Untuk sekarang, aku hanya ingin terus berkembang.</p>
+                    <p>Aku ingin bisa membuat project yang lebih kompleks, memahami teknologi baru, memperbaiki
+                        kemampuan desain, dan semakin percaya diri ketika membuat sesuatu dari nol.</p>
+                    <p>Aku juga ingin memiliki lebih banyak project yang bisa menunjukkan perkembangan kemampuanku.</p>
+                    <p>Ada banyak hal yang masih ingin aku pelajari.</p>
+                    <p>Mulai dari membuat website yang lebih interaktif, memahami JavaScript lebih dalam, mencoba
+                        teknologi baru, sampai belajar bagaimana membuat sebuah project yang benar-benar nyaman
+                        digunakan orang lain.</p>
+                    <p>Tetapi selain kemampuan teknis, aku ingin tetap menikmati prosesnya.</p>
+                    <p>Karena mungkin hal paling penting bukan seberapa cepat aku sampai di tujuan.</p>
+                    <p>Tetapi seberapa banyak hal yang aku pelajari selama perjalanan menuju ke sana.</p>
+                    <p>Aku ingin terus mencoba, terus membuat sesuatu, dan terus berkembang sedikit demi sedikit.</p>
+                </div>
+                <div class="post-full" id="post19" hidden data-title="19. Dari “Aku Nggak Bisa” Menjadi “Aku Coba Dulu”"
+                    data-meta="Personal &middot; 3 menit baca">
+                    <p>Ada banyak hal yang dulu terlihat terlalu sulit.</p>
+                    <p>Ketika melihat kode yang panjang atau project yang terlihat kompleks, aku sering berpikir bahwa
+                        aku mungkin belum bisa membuatnya.</p>
+                    <p>Tetapi semakin sering belajar, aku mulai mengubah cara berpikir.</p>
+                    <p>Daripada mengatakan “aku nggak bisa”, aku mencoba mengatakan “aku coba dulu.”</p>
+                    <p>Hasilnya mungkin belum langsung benar.</p>
+                    <p>Bisa jadi malah muncul banyak error.</p>
+                    <p>Tetapi setidaknya aku sudah mencoba.</p>
+                    <p>Dari mencoba, aku bisa tahu apa yang belum aku pahami.</p>
+                    <p>Dari kesalahan, aku bisa belajar.</p>
+                    <p>Dan dari proses tersebut, sesuatu yang awalnya terlihat sulit perlahan mulai terasa mungkin.</p>
+                    <p>Aku tidak selalu berhasil pada percobaan pertama.</p>
+                    <p>Kadang harus mencari tahu lagi, membaca ulang, bertanya, mencoba cara lain, bahkan mengulang dari
+                        awal.</p>
+                    <p>Tetapi sekarang aku mulai memahami bahwa belum bisa bukan berarti tidak akan bisa.</p>
+                    <p>Mungkin aku hanya belum menemukan cara yang tepat.</p>
+                    <p>Dan selama masih mau mencoba, selalu ada kemungkinan untuk berkembang.</p>
+                </div>
+                <div class="post-full" id="post20" hidden data-title="20. Catatan untuk Diriku di Masa Depan"
+                    data-meta="Personal &middot; 3 menit baca">
+                    <p>Untuk aku yang sedang membaca tulisan ini beberapa tahun dari sekarang, semoga kamu masih ingat
+                        bagaimana semuanya dimulai.</p>
+                    <p>Dari rasa penasaran kecil. Dari project sederhana. Dari error yang pernah bikin bingung. Dari
+                        desain yang berkali-kali diubah. Dari kode yang tidak berjalan sesuai harapan.</p>
+                    <p>Dan dari banyak hal kecil yang akhirnya membentuk perjalananmu.</p>
+                    <p>Kalau sekarang kamu sudah jauh lebih hebat, jangan lupa bahwa semuanya pernah dimulai dari
+                        belajar sedikit demi sedikit.</p>
+                    <p>Kalau ternyata perjalananmu belum sesuai dengan yang kamu bayangkan, tidak apa-apa.</p>
+                    <p>Kamu tetap sudah berjalan sejauh ini.</p>
+                    <p>Semoga kamu masih punya rasa penasaran yang sama. Semoga kamu masih berani mencoba hal baru.
+                        Semoga kamu masih suka membuat sesuatu dari ide yang awalnya hanya ada di kepala.</p>
+                    <p>Dan semoga kamu masih bangga dengan dirimu yang dulu pernah memulai semuanya.</p>
+                    <p>Jangan lupa untuk melihat ke belakang sesekali.</p>
+                    <p>Bukan untuk menyesali apa yang belum tercapai, tetapi untuk melihat seberapa jauh kamu sudah
+                        berkembang.</p>
+                    <p>Terima kasih sudah memulai.</p>
+                    <p>— Klara, dari masa lalu.</p>
+                </div>
+            </div>
+        </section>
+        <div class="modal" id="bmodal">
+            <div class="box"><button class="x">&times;</button>
+                <p class="sub" id="bmeta" style="margin-bottom:4px"></p>
+                <h3 id="bt" style="margin-bottom:14px"></h3>
+                <div id="bd"></div>
+            </div>
+        </div>
+    </main>
+    <script src=js/script.js></script>
+    <script>
+        document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('.filters button').forEach(x => x.classList.remove('on')); b.classList.add('on'); document.querySelectorAll('.po').forEach(c => c.classList.toggle('hide', b.dataset.f != 'all' && c.dataset.c != b.dataset.f)) }));
+        q.oninput = () => document.querySelectorAll('.po').forEach(c => c.classList.toggle('hide', !c.textContent.toLowerCase().includes(q.value.toLowerCase())));
+        const bm = document.getElementById('bmodal');
+        document.querySelectorAll('.po').forEach(c => { const open = () => { const src = document.getElementById(c.dataset.target); bt.textContent = src.dataset.title; bmeta.textContent = src.dataset.meta; bd.innerHTML = src.innerHTML; bm.classList.add('open'); bm.scrollTop = 0 }; c.addEventListener('click', open); c.addEventListener('keydown', e => { if (e.key == 'Enter') open() }) });
+        bm.addEventListener('click', e => { if (e.target == bm || e.target.classList.contains('x')) bm.classList.remove('open') });
+    </script>
+</body>
+
+</html>

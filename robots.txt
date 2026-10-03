@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://klaraoktavianaa.netlify.app/sitemap.xml
